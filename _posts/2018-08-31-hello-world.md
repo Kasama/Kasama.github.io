@@ -23,4 +23,13 @@ Technology.
 ## About Me
 
 My name is Roberto, I'm a Brazilian Computer Scientist, software developer, and
-technology enthusiast
+technology enthusiast.
+
+My main areas of expertise are Web development, Linux Systems, Infrastructure
+and automation.
+
+## Language
+
+My mother tongue is Portuguese, but I find that, by writing the blog posts in
+English, I'll be able to reach a broader audience. Although there may be an
+occasional Portuguese post.

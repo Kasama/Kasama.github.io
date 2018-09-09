@@ -7,6 +7,7 @@
 
 $black:  #3b3b3b;
 $white: #f9f9f9;
+$white-glow: rgba(255,255,255,0.6);
 
 $grey-dark:   #222;
 $grey-medium: #999;
@@ -48,13 +49,11 @@ $footerHeight: 320px;
    ========================================================================== */
    
 /* Mobile */
-$breakpoint-1-max-width:480px;
+$mobile-width: 360px;
 
 /* Tablet */
-$breakpoint-2-max-width:800px;
-$breakpoint-3-max-width:1200px;
+$tablet-width: 680px;
 
 /* Style Tidbits
    ========================================================================== */
 $borderR: 4px;
-

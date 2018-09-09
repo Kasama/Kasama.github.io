@@ -49,7 +49,7 @@ blockquote, blockquote p {  font-size: $fs2; }
 
 // Iphone 
 
-@media only screen and (max-width: $breakpoint-1-max-width) {
+@media only screen and (max-width: $mobile-width) {
 
 p {           
     font-size: $fs5;

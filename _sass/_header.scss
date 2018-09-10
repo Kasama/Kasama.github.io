@@ -1,47 +1,3 @@
-/* Layout */
-header {
-  grid-area: topHeader;
-  @include clearfix;
-
-  padding-top: 1.3em;
-  position: absolute;
-  width: 100%;
-  z-index: 5000;
-
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: auto;
-  grid-row-gap: 1em;
-  grid-column-gap: 1em;
-  grid-template-areas:
-    "headerTitle headerNav";
-}
-
-header > hgroup {
-  grid-area: headerTitle;
-
-  justify-self: start;
-}
-
-header > nav {
-  grid-area: headerNav;
-  justify-self: end;
-
-  @include clearfix;
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-    li {
-      margin-left: 0.5em;
-      margin-right: 0.5em;
-    }
-  }
-}
-
 /* Ui */
 header {
   background-color: $black;
@@ -78,7 +34,7 @@ header > nav {
         @include textGlow(0, 0, 3px, $white-glow);
         @include transit(all, .2s, ease);
       }
-    } 
+    }
   }
 }
 
@@ -90,6 +46,47 @@ header a.menu {
   display: none;
 }
 
+/* Layout */
+header {
+  @include clearfix;
+
+  padding: 1.3em 1.3em 0 1.3em;
+  z-index: 5000;
+
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+  grid-template-areas:
+    "headerTitle headerNav";
+}
+
+header > hgroup {
+  grid-area: headerTitle;
+
+  justify-self: start;
+}
+
+header > nav {
+  grid-area: headerNav;
+  justify-self: end;
+
+  @include clearfix;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    li {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+    }
+  }
+}
+
 @media only screen and (max-width : $tablet-width) {
   header {
     grid-template-columns: auto;
@@ -97,6 +94,10 @@ header a.menu {
     grid-template-areas:
       "headerTitle"
       "headerNav";
+  }
+
+  header > hgroup {
+    justify-self: center;
   }
 
   header > nav {

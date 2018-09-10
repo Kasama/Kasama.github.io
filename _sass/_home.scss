@@ -1,0 +1,63 @@
+@import "base";
+@import "header";
+@import "footer";
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 8fr 3fr;
+  grid-template-rows: 1fr auto 3fr;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+  grid-template-areas:
+    "topHeader topHeader topHeader topHeader"
+    ". aside mainContent ."
+    "footer footer footer footer";
+}
+
+body > header {
+  grid-area: topHeader;
+}
+
+body > footer {
+  grid-area: footer;
+}
+
+body > aside {
+  grid-area: aside;
+}
+
+body > main {
+  grid-area: mainContent;
+}
+
+body > main > a > article {
+  background-color: $white;
+  border-radius: 3px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  box-shadow: 1px 1px 5px 0px $gray-light;
+  @include transit(box-shadow, 0.2s, ease-in-out);
+
+  &:hover {
+    box-shadow: 5px 5px 5px 0px $gray-light;
+    @include transit(box-shadow, 0.2s, ease-in-out);
+  }
+
+  * {
+    display: block;
+    margin-bottom: 0.3em;
+  }
+
+  h1 {
+    color: $gray-dark;
+    font-size: 2em;
+  }
+
+  time {
+    color: $gray-medium;
+  }
+
+  summary {
+    color: $gray-dark;
+  }
+}

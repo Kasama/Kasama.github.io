@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Hello World!"
-date:   2018-08-31 01:03:00 -0300
+title: "Hello World!"
+date: 2018-08-31 01:03:00 -0300
 comments: true
 categories: update text
+description: An introductory post explaining who I am and what i do
 ---
 
 {% highlight ruby %}

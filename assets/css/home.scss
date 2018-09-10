@@ -6,19 +6,8 @@
    Imports
    ========================================================================== */
 
-@import "normalize";
-@import "mixins";
-@import "variables";
-@import "type";
-// @import "styles";
-/*
-@import "normalize";
-@import "mixins";
-@import "variables";
-@import "grid";
-@import "type";
-@import "styles";
-*/
+@import "base";
+@import "home";
 
 // Remove the definition below for a pixel-based layout
 $total-width: 100%;

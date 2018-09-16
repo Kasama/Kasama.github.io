@@ -1,0 +1,50 @@
+section.presentation-card > *{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.presentation-card {
+  summary {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 1em;
+  }
+}
+
+ul.social {
+  li {
+    display: block;
+    text-align: center;
+  }
+  * {
+    display: inline-block;
+  }
+
+  & > * {
+    margin-bottom: 0.4em;
+  }
+
+  li * {
+    color: $black;
+  }
+
+  a {
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+
+  i::before {
+    margin-right: 0.4em;
+  }
+}
+
+#profilePic {
+  margin-bottom: 1em;
+  * {
+    border-radius: 100%;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

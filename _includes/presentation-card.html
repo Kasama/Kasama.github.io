@@ -1,0 +1,57 @@
+<section class="card presentation-card">
+  <picture id="profilePic">
+    <a href="/about">
+      <source srcset="/images/{{ site.owner.avatar }}">
+      <img src="/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }}">
+    </a>
+  </picture>
+  <summary>{{ site.owner.bio }}</summary>
+  <ul class="social">
+    {% if site.owner.location %}
+    <li class="location">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>{{ site.owner.location }}</span>
+    </li>
+    {% endif %}
+    {% if site.owner.github %}
+    <li class="github">
+      <a href="https://github.com/{{ site.owner.github }}" target="_blank">
+        <i class="fab fa-github"></i>
+        <span>{{ site.owner.github }}</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if site.owner.instagram %}
+    <li class="email">
+      <a href="http://instagram.com/{{ site.owner.instagram }}" target="_blank">
+        <i class="fab fa-instagram"></i>
+        <span>{{ site.owner.instagram }}</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if site.owner.facebook %}
+    <li class="email">
+      <a href="http://facebook.com/{{ site.owner.faceboko }}" target="_blank">
+        <i class="fab fa-facebook"></i>
+        <span>{{ site.owner.facebook }}</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if site.owner.twitter %}
+    <li class="twitter">
+      <a href="http://twitter.com/{{ site.owner.twitter }}" target="_blank">
+        <i class="fab fa-twitter"></i>
+        <span>@{{ site.owner.twitter }}</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if site.owner.email %}
+    <li class="email">
+      <a href="mailto:{{ site.owner.email }}" target="_blank">
+        <i class="fas fa-envelope"></i>
+        <span>{{ site.owner.email }}</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</section>

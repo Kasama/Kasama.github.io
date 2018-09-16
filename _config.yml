@@ -1,16 +1,17 @@
 title:            Kasama
 tagline:          Imma Developer
 description:
-  My personal & techish blog. Where I talk about tools, technologies and conscepts
-canonical:        https://kasama.github.io
+  My personal & techish blog. Where I talk about tools, technologies and concepts
+canonical:        https://robertoalegro.com
 
 # Owner/author information
 owner:
   name:           Roberto Alegro
-  avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
+  avatar:         profile.jpg
+  bio:            "Coisas e Outras coisasitas más"
   email:          robertoaall@gmail.com
-  twitter:        RobertoAlegro
+  facebook:       roberto.alegro
+  twitter:        robertoAlegro
   github:         Kasama
   instagram:
   dribbble:

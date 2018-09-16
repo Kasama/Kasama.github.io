@@ -1,5 +1,6 @@
 /* Ui */
 header {
+  max-height: 4em;
   background-color: $black;
 }
 
@@ -89,6 +90,7 @@ header > nav {
 
 @media only screen and (max-width : $tablet-width) {
   header {
+    max-height: 10em;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:

@@ -1,10 +1,12 @@
 @import "base";
 @import "header";
 @import "footer";
+@import "presentation-card";
 
 body {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 2fr 8fr 3fr;
+  grid-template-columns: 1fr 6fr 16fr 1fr;
   grid-template-rows: 1fr auto 3fr;
   grid-row-gap: 1em;
   grid-column-gap: 1em;
@@ -31,8 +33,23 @@ body > main {
 }
 
 body > main > a > article {
+  h1 {
+    color: $gray-dark;
+    font-size: 2em;
+  }
+
+  time {
+    color: $gray-medium;
+  }
+
+  summary {
+    color: $gray-dark;
+  }
+}
+
+.card {
   background-color: $white;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 1.5em;
   margin-bottom: 1.5em;
   box-shadow: 1px 1px 5px 0px $gray-light;
@@ -45,19 +62,9 @@ body > main > a > article {
 
   * {
     display: block;
+  }
+
+  & > * {
     margin-bottom: 0.3em;
-  }
-
-  h1 {
-    color: $gray-dark;
-    font-size: 2em;
-  }
-
-  time {
-    color: $gray-medium;
-  }
-
-  summary {
-    color: $gray-dark;
   }
 }

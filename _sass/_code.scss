@@ -1,0 +1,42 @@
+/*   Code Formatting    */
+
+code {
+    color: $accent;
+    font-family: "Monaco", "Courier New", "Courier";
+    font-size: .75em;
+    font-weight: bold;
+}
+
+.highlight {
+    background: $black;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: $lh;
+    overflow-x: scroll;
+
+    code {
+        color: $white;
+        font-family: "Monaco", "Courier New", "Courier";
+        font-size: .9em;
+        .lineno {
+          margin-right: $lh/2;
+          color: $gray-light;
+          line-height: 2em;
+        }
+        .nb {
+          color: #cc6666;
+        }
+        .na {
+          color: #f0e687;
+        }
+        .s2 {
+          color: #b5bd68;
+        }
+        .c1 {
+          color: #858886;
+        }
+        .s {
+          color: #87ceeb;
+        }
+    }
+}

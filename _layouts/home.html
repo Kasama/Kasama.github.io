@@ -7,6 +7,7 @@
     <aside class="presentation">
       {% include presentation-card.html %}
     </aside>
+
     <main>
       {% for post in site.posts %}
       <a href="{{ site.url }}{{ post.url }}">
@@ -17,7 +18,7 @@
           </time>
           <summary>
             {% if post.description %}
-              {{ post.description  | strip_html | strip_newlines | truncate: 120 }}
+              {{ post.description | strip_html | strip_newlines | truncate: 120 }}
             {% else %}
               {{ post.content | strip_html | strip_newlines | truncate: 120 }}
             {% endif %}

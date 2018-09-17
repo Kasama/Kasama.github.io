@@ -23,6 +23,15 @@ $accent: #24536B;
 $sans: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
 $serif: "Calendas Plus","Crimson Text", "Hoefler Text", "Georgia", serif;
 
+/* Font Sizes
+   ========================================================================== */
+
+$headerFS: 2em;
+$subheaderFS: $headerFS * 0.9;
+$textFS: $headerFS * 0.45;
+$summaryFS: $headerFS * 0.35;
+$importantFS: $headerFS * 0.55;
+
 /* Type Scale
    ========================================================================== */
 /** * 12 & 16 as roots then powers of two. */

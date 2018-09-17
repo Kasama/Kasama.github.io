@@ -1,5 +1,5 @@
 <section class="card presentation-card">
-  <picture id="profilePic">
+  <picture class="profilePic">
     <a href="/about">
       <source srcset="/images/{{ site.owner.avatar }}">
       <img src="/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }}">
@@ -31,7 +31,7 @@
     {% endif %}
     {% if site.owner.facebook %}
     <li class="email">
-      <a href="http://facebook.com/{{ site.owner.faceboko }}" target="_blank">
+      <a href="http://facebook.com/{{ site.owner.facebook }}" target="_blank">
         <i class="fab fa-facebook"></i>
         <span>{{ site.owner.facebook }}</span>
       </a>
@@ -54,4 +54,5 @@
     </li>
     {% endif %}
   </ul>
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/presentation-card.css">
 </section>

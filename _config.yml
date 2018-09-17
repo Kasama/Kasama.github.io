@@ -2,13 +2,14 @@ title:            Kasama
 tagline:          Imma Developer
 description:
   My personal & techish blog. Where I talk about tools, technologies and concepts
+url:              https://robertoalegro.com
 canonical:        https://robertoalegro.com
 
 # Owner/author information
 owner:
   name:           Roberto Alegro
   avatar:         profile.jpg
-  bio:            "Coisas e Outras coisasitas más"
+  bio:            "Full-Stack Developer. Functional Programming and DevOps advocate. Automation addict"
   email:          robertoaall@gmail.com
   facebook:       roberto.alegro
   twitter:        robertoAlegro

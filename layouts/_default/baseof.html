@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="{{ .Site.Params.Author }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}img/favicon.ico">
+  <title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
+  <meta name="description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+  {{ $style := resources.Get "css/main.scss" | resources.ToCSS | postCSS (dict "config"
+  "./assets/css/postcss.config.js") }}
+  {{ if .Site.IsServer }}
+  {{ $style := $style | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{ else }}
+  {{ $style := $style | minify | fingerprint | resources.PostProcess }}
+  <link rel="preload stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" as="style">
+  {{ end }}
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old">
+  {{ range .Site.Params.custom_css }}
+  <link rel="stylesheet" href="{{ $.Site.BaseURL}}{{ . }}">
+  {{ end }}
+</head>
+
+<body class="flex justify-center center">
+  <div class="flex flex-col items-stretch justify-between lg:max-w-[60%] md:max-w-[80%] w-full">
+    {{- block "main" . }}{{- end }}
+    <!-- Footer -->
+    {{ partial "footer" . }}
+  </div>
+</body>
+
+</html>

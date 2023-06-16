@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ partial "header" . }}
+
+<main class="flex flex-col md:flex-row-reverse w-full justify-between items-center">
+  <aside class="avatar mb-5">
+    <img class="rounded-full max-w-xs max-h-xs" src="{{ .Site.Params.Avatar }}" alt="Responsive image">
+  </aside>
+  <article class="flex flex-col justify-center max-w-prose space-y-5">
+    <section class="content flex flex-col justify-center max-w-prose space-y-5">
+      {{ .Content }}
+    </section>
+    <section class="max-w-[20em] self-stretch">
+      {{ partial "social.html" . }}
+    </section>
+  </article>
+</main>
+
+{{ end }}

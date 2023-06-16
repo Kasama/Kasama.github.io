@@ -1,0 +1,49 @@
+baseURL = 'http://robertoalegro.com/'
+languageCode = 'en-us'
+title = "Roberto's Homepage"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+# googleAnalytics = ""
+
+[permalinks]
+post = "/:year/:month/:day/:slug"
+
+[params]
+avatar = "profile.jpg"
+author = "Roberto Alegro"
+description = "My personal webpage"
+
+# Custom assets can be linked with their paths relative to static/
+custom_css = []
+custom_js = []
+
+[params.social]
+Github = "kasama"
+Email = "hello@robertoalegro.com"
+# Twitter = "username"
+LinkedIn = "robertoalegro"
+# Stackoverflow = "username"
+# Medium = "username"
+Telegram = "Kasama"
+# RSS = "/blog/index.xml"
+Spotify = "_kasama"
+
+## Main Menu
+# [[menu.main]]
+# name = "blog"
+# weight = 100
+# identifier = "blog"
+# url = "/blog/"
+[[menu.main]]
+name = "projects"
+identifier = "projects"
+weight = 200
+# url = "/projects/"
+url = "https://github.com/Kasama"
+[[menu.main]]
+name = "resume"
+identifier = "resume"
+weight = 300
+# url = "/resume/"
+url = "https://linkedin.com/in/robertoalegro"

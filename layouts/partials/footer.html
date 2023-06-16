@@ -1,0 +1,8 @@
+<footer class="self-end">
+  <div class="container">Made by {{$.Site.Params.Author}} with <span class="text-red-300">♥</span></div>
+</footer>
+
+<!-- Custom JavaScript -->
+{{- range .Site.Params.custom_js -}}
+<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+{{ end }}

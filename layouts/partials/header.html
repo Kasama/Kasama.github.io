@@ -1,0 +1,14 @@
+<header class="text-3xl">
+  <nav class="text-center flex justify-between w-full">
+    <a class="flex-initial" href="{{ .Site.BaseURL }}">
+      <i class="fa fa-home"></i>
+    </a>
+    <ul class="flex flex-row text-2xl font-bold space-x-2 md:space-x-6">
+      {{ if .Site.Menus.main }}
+      {{ range .Site.Menus.main }}
+      <li><a class="nav-link" href="{{ .URL }}">{{ .Name | upper }}</a></li>
+      {{ end }}
+      {{ end }}
+    </ul>
+  </nav>
+</header>

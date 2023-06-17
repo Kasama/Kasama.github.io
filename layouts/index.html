@@ -2,8 +2,8 @@
 {{ partial "header" . }}
 
 <main class="flex flex-col md:flex-row-reverse w-full justify-between items-center">
-  <aside>
-    <img class="rounded-full max-w-xs max-h-xs w-xs" src="{{ .Site.Params.Avatar }}" alt="Roberto's headshot">
+  <aside class="md:ml-5 mb-5">
+    <img class="rounded-full max-h-[15rem] max-w-[15rem] w-[15rem]" src="{{ .Site.Params.Avatar }}" alt="{{ .Site.Params.Author }}'s headshot">
   </aside>
   <article class="flex flex-col justify-center max-w-prose space-y-5">
     <section class="content flex flex-col justify-center max-w-prose space-y-5">

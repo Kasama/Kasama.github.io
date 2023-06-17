@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" class="flex flex-col">
 
 <head>
   <meta charset="utf-8">
@@ -28,7 +28,7 @@
   {{ end }}
 </head>
 
-<body class="flex justify-center center">
+<body class="flex justify-center center grow">
   <div class="flex flex-col items-stretch justify-between max-w-[95%] lg:max-w-[60%] md:max-w-[80%] w-full">
     {{- block "main" . }}{{- end }}
     <!-- Footer -->

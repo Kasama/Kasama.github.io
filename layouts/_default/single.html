@@ -1,47 +1,49 @@
 {{ define "main" }}
-  <!-- Header -->
-  {{ partial "header" . }}
+<!-- Header -->
+{{ partial "header" . }}
 
-  <div class="container">
-    <h3 class="mt-3"><b><a href="{{ .Permalink }}">{{ .Title }}</a></b></h3>
-    <div class="blog-title my-4">
-      <h6>
+<main class="flex flex-col mt-20 max-w-[95vw] lg:max-w-[50vw] md:max-w-[80vw] self-center space-y-10">
+  <section>
+    <header>
+      <h1><b><a href="{{ .Permalink }}">{{ .Title }}</a></b></h1>
+      <h4>
         {{ .Date.Format "January 2, 2006" }}
         &nbsp;&nbsp;
         {{ range .Params.tags }}
-          <span class="badge bg-success">{{ . }}</span>
+        <span class="badge bg-cyan-600 hover:bg-cyan-900">{{ . }}</span>
         {{ end }}
-      </h6>
-    </div>
-    <div class="panel">
-      <div class="panel-body">
-        <div class="blogpost">
-          {{ .Content }}
-          {{ $related := .Site.RegularPages.Related . | first 3 }}
-          {{ with $related }}
-            <div class="related-posts mt-4 py-3">
-              <h5>Related Posts</h5>
-              {{ range . }}
-                <div class="row">
-                  <div class="col-4">
-                    <h6 style="text-align: right">
-                      {{ .Date.Format "January 2, 2006" }}
-                    </h6>
-                  </div>
-                  <div class="col-8">
-                    <h6 style="text-align: left">
-                      <b><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></b>
-                    </h6>
-                  </div>
-                </div>
-              {{ end }}
-            </div>
-          {{ end }}
-        </div>
-      </div>
-      <div class="disqus">
-        {{ template "_internal/disqus.html" . }}
-      </div>
-    </div>
-  </div>
+      </h4>
+    </header>
+  </section>
+  <section>
+    <article class="mt-4 flex flex-col space-y-4 content">
+      {{ .Content }}
+    </article>
+  </section>
+  <!-- <section> -->
+  <!--   {{ $related := .Site.RegularPages.Related . | first 3 }} -->
+  <!--   {{ with $related }} -->
+  <!--   <div class="related-posts mt-4 py-3"> -->
+  <!--     <h5>Related Posts</h5> -->
+  <!--     {{ range . }} -->
+  <!--     <div class="row"> -->
+  <!--       <div class="col-4"> -->
+  <!--         <h6 style="text-align: right"> -->
+  <!--           {{ .Date.Format "January 2, 2006" }} -->
+  <!--         </h6> -->
+  <!--       </div> -->
+  <!--       <div class="col-8"> -->
+  <!--         <h6 style="text-align: left"> -->
+  <!--           <b><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></b> -->
+  <!--         </h6> -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--     {{ end }} -->
+  <!--   </div> -->
+  <!--   {{ end }} -->
+  <!-- </section> -->
+  <!-- <aside class="disqus"> -->
+  <!--   {{ template "_internal/disqus.html" . }} -->
+  <!-- </aside> -->
+</main>
 {{ end }}

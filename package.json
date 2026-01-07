@@ -4,7 +4,11 @@
   "description": "My personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hugo": "hugo",
+    "hugo-server": "hugo server --bind 0.0.0.0 --port 1313 --buildDrafts --buildFuture",
+    "build": "hugo --minify",
+    "dev": "npm run hugo-server"
   },
   "repository": {
     "type": "git",

@@ -1,37 +1,37 @@
-<ul class="flex w-full justify-between text-2xl">
+<ul class="flex w-full justify-center md:justify-between text-xl md:text-2xl flex-wrap gap-4 md:gap-0">
   {{ with .Site.Params.Social.Github }}
-  <li><a href="https://github.com/{{ . }}"><i class="fa fa-github"></i></a></li>
+  <li><a href="https://github.com/{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-github"></i></a></li>
   {{ end }}
 
   {{ with .Site.Params.Social.Email }}
-  <li><a href="mailto:{{ . }}"><i class="fa fa-envelope"></i></a></li>
+  <li><a href="mailto:{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-envelope"></i></a></li>
   {{ end }}
 
   {{ with .Site.Params.Social.Twitter }}
-  <li><a href="https://twitter.com/{{ . }}"><i class="fa fa-twitter"></i></a></li>
+  <li><a href="https://twitter.com/{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-twitter"></i></a></li>
   {{ end }}
 
   {{ with .Site.Params.Social.LinkedIn }}
-  <li><a href="https://linkedin.com/in/{{ . }}"><i class="fa fa-linkedin"></i></a></li>
+  <li><a href="https://linkedin.com/in/{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-linkedin"></i></a></li>
   {{ end }}
 
   {{ with .Site.Params.Social.Stackoverflow }}
-  <li><a href="https://stackoverflow.com/{{ . }}"><i class="fa fa-stack-overflow"></i></a></li>
+  <li><a href="https://stackoverflow.com/{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-stack-overflow"></i></a></li>
   {{ end }}
 
   {{ with .Site.Params.Social.Medium }}
-  <li><a href="https://medium.com/@{{ . }}"><i class="fa fa-medium"></i></a></li>
+  <li><a href="https://medium.com/@{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-medium"></i></a></li>
   {{ end }}
 
   {{ with .Site.Params.Social.Telegram }}
-  <li><a href="https://telegram.me/{{ . }}"><i class="fa fa-telegram"></i></a></li>
+  <li><a href="https://telegram.me/{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-telegram"></i></a></li>
   {{ end }}
 
   {{ with .Site.Params.Social.Spotify }}
-  <li><a href="https://open.spotify.com/user/{{ . }}"><i class="fa fa-spotify"></i></a></li>
+  <li><a href="https://open.spotify.com/user/{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-spotify"></i></a></li>
   {{ end }}
 
   {{ with .Site.Params.Social.RSS }}
-  <li><a href="{{ . }}"><i class="fa fa-rss"></i></a></li>
+  <li><a href="{{ . }}" class="hover:text-blue-300 hover:scale-110 transition-all duration-200"><i class="fa fa-rss"></i></a></li>
   {{ end }}
 </ul>
